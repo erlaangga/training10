@@ -1,0 +1,22 @@
+<odoo>
+	<data>
+        <report 
+            id="report_schedule"
+            string="Schedule Plan / Operation"
+            model="jadwal.bus"
+            report_type="qweb-pdf"
+            file="report_schedule_bus" 
+            name="belajar_odoo.report_schedule_document" 
+        />
+        
+        <report
+		    id="partner_xlsx"
+		    model="res.partner"
+		    string="Print to XLSX"
+		    report_type="xlsx"
+		    name="res.partner.xlsx"
+		    file="res.partner.xlsx"
+		    attachment_use="False"
+		/>
+	</data>
+</odoo>

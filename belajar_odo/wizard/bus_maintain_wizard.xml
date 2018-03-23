@@ -1,0 +1,32 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="wizard_bus_maintain">
+			<field name="name">Bus Maintain Wizard</field>
+			<field name="model">bus.maintain.wizard</field>
+			<field name="arch" type="xml">
+				<form>
+                    <separator name="bus" string="Bus(es)"/>
+					<field name="bus_ids" domain="[('state','not in', ('maintain','deprecated'))]"/>
+					<p class="oe_grey">
+                        Are you sure the bus will be maintenance?
+                    </p>
+                    <footer>
+                    	<button string="Maintain" name="act_maintain" type="object"
+                            default_focus="1" class="oe_highlight" />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+				</form>
+			</field>
+		</record>
+		
+		<record id="maintain_act_wizard" model="ir.actions.act_window">
+            <field name="name">Maintain Bus</field>
+            <field name="res_model">bus.maintain.wizard</field>
+            <field name="view_id" ref="wizard_bus_maintain" />
+            <field name="target">new</field>
+        </record>
+        
+        <menuitem id="maintain_wizard" name="Maintain Adjustment" parent="bus_menu" action="maintain_act_wizard" groups="belajar_odoo.group_transport_manager" />
+	</data>
+</odoo>

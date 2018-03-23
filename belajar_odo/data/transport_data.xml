@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+		<record id="sequence_schedule_bus" model="ir.sequence">
+            <field name="name">Schedule Bus Sequence</field>
+            <field name="code">sequence.bus.schedule</field>
+            <field name="prefix">SCH/%(range_year)s/</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="True" name="use_date_range"/>
+            <field eval="False" name="company_id"/>
+            <field name="implementation">no_gap</field>
+            <field name="padding">4</field>
+        </record>
+	</data>
+</odoo>

@@ -1,0 +1,198 @@
+<odoo>
+	<data>
+	
+		<record model="ir.ui.view" id="penumpang_view_tree">
+			<field name="name">Penumpang Form</field>
+			<field name="model">penumpang.transportasi</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="id_number" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="penumpang_view_form">
+			<field name="name">Penumpang Form</field>
+			<field name="model">penumpang.transportasi</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<field name="state" widget="statusbar" clickable="True" />
+					</header>
+					<sheet>
+						<h1>
+							<field name="name" placeholder="Name" required="1" />
+						</h1>
+						<group>
+							<group>
+								<field name="weight" />
+								<field name="born_date" />
+								<field name="age" />
+							</group>
+							<group>
+								<field name="height" />
+								<field name="id_number" />
+							</group>
+						</group>
+					</sheet> 
+				</form>
+			</field>
+		</record>
+	
+		<act_window id="penumpang_act_view" name="Passengers Data" res_model="penumpang.transportasi" view_mode="tree,form" />
+		
+		<record id="penumpang_act_view" model="ir.actions.act_window">
+            <field name="name">Passengers</field>
+            <field name="res_model">penumpang.transportasi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a passenger.
+              </p><p>
+                Passengers are easily managed.
+              </p>
+            </field>
+        </record>
+		
+		<menuitem id="transportasi_menu" name="Transportations" sequence="50"/>
+		
+		<menuitem id="penumpang_menu" name="Passengers" sequence="20" parent="transportasi_menu" />
+		
+		<menuitem id="penumpang_sub_menu" name="Passengers" sequence="10" action="penumpang_act_view" parent="penumpang_menu" />
+		
+		<record model="ir.ui.view" id="bus_view_tree">
+			<field name="name">Bus Form</field>
+			<field name="model">transportasi.bus</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="code" />
+					<field name="price" groups="belajar_odoo.group_transport_manager" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="bus_view_form">
+			<field name="name">Bus Form</field>
+			<field name="model">transportasi.bus</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<field name="image" widget="image" class="oe_avatar" options='{"preview_image": "image", "size": [90, 90]}' />
+						<div class="oe_title">
+							<h1>
+								<field name="name" placeholder="Name" required="1" />
+							</h1>
+							<label for="state" />
+							<div class="o_row">
+								<field name="state" widget="radio" options="{'horizontal':true}" required="1" />
+							</div>
+						</div>
+						<notebook>
+							<page string="General Information">
+								<group>
+									<group>
+										<field name="capacity" />
+									</group>
+									<group>
+										<field name="code" />
+										<field name="price" groups="belajar_odoo.group_transport_manager" />
+									</group>
+								</group>
+							</page>
+							<page string="Schedule">
+								<separator string="Detail" />
+								<field name="schedule_line" >
+									<tree>
+										<field name="schedule_time" />
+										<field name="passenger_line" />
+										<field name="departure_time" />
+										<field name="arrival_time" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet> 
+				</form>
+			</field>
+		</record>
+		
+		<act_window id="bus_act_view" name="Bus Unit" res_model="transportasi.bus" view_mode="tree,form" />
+		
+		<record model="ir.ui.view" id="schedule_bus_tree" >
+			<field name="name">Schedule</field>
+			<field name="model">jadwal.bus</field>
+			<field name="arch" type="xml">
+				<tree decoration-bf="state=='done'" decoration-muted="state=='cancel'" decoration-info="state=='ok'" decoration-warning="state=='delay'">
+					<field name="bus_id" />
+					<field name="name" />
+					<field name="schedule_time" />
+					<field name="passenger_count" />
+					<field name="departure_time" />
+					<field name="arrival_time" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="schedule_bus_form" >
+			<field name="name">Schedule</field>
+			<field name="model">jadwal.bus</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="%(remove_passenger_act_wizard)d" type="action" string="Remove Passenger" attrs="{'invisible':[('state','!=','draft')]}" />
+						<button name="print_excel" type="object" string="Print Excel" class="oe_highlight" />
+						<button name="act_run" type="object" string="Run" class="oe_highlight" attrs="{'invisible':[('state','!=','draft')]}" />
+						<button name="act_done" type="object" string="Done" class="oe_highlight" states="ok,delay" />
+						<button name="act_cancel" type="object" string="Cancel" attrs="{'invisible':[('state','=','done')]}" />
+						<field name="state" widget="statusbar" statusbar_visible="draft,ok,done" />
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<h1><field name="name" /></h1>
+							<label for="schedule_time" />			
+							<div class="o_row">
+								<field name="schedule_time" attrs="{'readonly':[('state','=','done')]}" />
+							</div>		
+						</div>
+						<group>
+							<group>
+								<field name="driver_id" required="1" domain="[('employee','=',1)]" attrs="{'readonly':[('state','=','done')]}" />
+								<field name="departure_time" attrs="{'readonly':[('state','=','done')]}" />
+								<field name="passenger_count" attrs="{'readonly':[('state','=','done')]}" />
+							</group>
+							<group>
+								<field name="bus_id" attrs="{'readonly':[('state','=','done')]}" />
+								<field name="arrival_time" attrs="{'readonly':[('state','=','done')]}" />
+								<field name="price" attrs="{'readonly':[('state','=','done')]}" />
+							</group>
+						</group>
+						<separator name="passengers" string="Passengers" />
+						<field name="passenger_line" attrs="{'readonly':[('state','=','done')]}" />
+						<group col="4" groups="belajar_odoo.group_transport_manager" >
+							<field name="income" attrs="{'readonly':[('state','=','done')]}" />
+							<field name="expense" attrs="{'readonly':[('state','=','done')]}" />
+							<field name="sub_total" attrs="{'readonly':[('state','=','done')]}" />
+						</group>
+						<field name="note" placeholder="Note for travel experience, moment, or incidents..." attrs="{'readonly':[('state','=','done')]}" />						
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<act_window id="action_schedule_bus_draft" name="Plans" res_model="jadwal.bus" view_mode="tree,form" domain="[('state','=','draft')]" />
+		<act_window id="action_schedule_bus" name="Operations" res_model="jadwal.bus" view_mode="tree,form" domain="[('state','!=','draft')]"/>
+		  
+		<menuitem id="bus_menu" name="Bus" sequence="50" parent="transportasi_menu" />
+		<menuitem id="bus_unit" name="Units" sequence="10" parent="bus_menu" action="bus_act_view" />
+		<menuitem id="driver_menu" name="Drivers" sequence="30" parent="bus_menu" action="base.action_partner_employee_form" />
+		<menuitem id="schedule_parent" name="Schedule" sequence="20" parent="bus_menu" />
+		<menuitem id="bus_schedule_draft" name="Plans" sequence="10" parent="schedule_parent" action="action_schedule_bus_draft" />
+		<menuitem id="bus_schedule" name="Operations" sequence="20" parent="schedule_parent" action="action_schedule_bus" />
+		
+	</data>
+</odoo>

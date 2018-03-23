@@ -1,0 +1,21 @@
+<odoo>
+	<data>
+		<record model="res.groups" id="group_transport_user">
+			<field name="name">Transport User</field>
+			<field name="implied_ids" eval="[(4,ref('base.group_user'))]" />
+		</record>
+		
+		<record model="res.groups" id="group_transport_manager">
+			<field name="name">Transport Manager</field>
+			<field name="implied_ids" eval="[(4,ref('group_transport_user'))]" />
+		</record>
+		
+		<record model="ir.rule" id="schedule_user_rule">
+	        <field name="name">Schedule User rule</field>
+	        <field name="model_id" ref="model_jadwal_bus"/>
+	        <field name="global" eval="True"/>
+	        <field name="domain_force">[('create_uid','=',user.id)]</field>
+    	</record>
+    	
+	</data>
+</odoo>

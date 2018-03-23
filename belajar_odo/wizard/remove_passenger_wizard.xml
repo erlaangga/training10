@@ -1,0 +1,31 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="wizard_remove_passenger">
+			<field name="name">Remove Passenger Wizard</field>
+			<field name="model">remove.passenger.wizard</field>
+			<field name="arch" type="xml">
+				<form>
+                    <separator name="passenger" string="Passengers(s)"/>
+					<field name="passenger_ids" />
+					<p class="oe_grey">
+                        Are you sure the bus will be maintenance?
+                    </p>
+                    <footer>
+                    	<button string="Maintain" name="act_maintain" type="object"
+                            default_focus="1" class="oe_highlight" />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+				</form>
+			</field>
+		</record>
+		
+		<record id="remove_passenger_act_wizard" model="ir.actions.act_window">
+            <field name="name">Remove Passenger</field>
+            <field name="res_model">remove.passenger.wizard</field>
+            <field name="view_id" ref="wizard_remove_passenger" />
+            <field name="target">new</field>
+        </record>
+        
+	</data>
+</odoo>

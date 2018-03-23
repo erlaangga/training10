@@ -1,0 +1,482 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* belajar_odoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20170131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-20 04:00+0000\n"
+"PO-Revision-Date: 2018-03-20 04:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "<strong>Arrival Time:</strong>"
+msgstr "<strong>Arrival Time:</strong>"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "<strong>Bus:</strong>"
+msgstr "<strong>Bus:</strong>"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "<strong>Departure Time:</strong>"
+msgstr "<strong>Departure Time:</strong>"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "<strong>Driver:</strong>"
+msgstr "<strong>Driver:</strong>"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "<strong>Price:</strong>"
+msgstr "<strong>Price:</strong>"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "<strong>Schedule:</strong>"
+msgstr "<strong>Schedule:</strong>"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_age
+#: model:ir.model.fields,field_description:belajar_odoo.field_res_partner_age
+msgid "Age"
+msgstr "Age"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.wizard_bus_maintain
+msgid "Are you sure the bus will be maintenance?"
+msgstr "Are you sure the bus will be maintenance?"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_arrival_time
+msgid "Arrival Time"
+msgstr "Arrival Time"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_born_date
+#: model:ir.model.fields,field_description:belajar_odoo.field_res_partner_born_date
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "Born Date"
+msgstr "Born Date"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_bus_maintain_wizard_bus_ids
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_bus_id
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_schedule_line
+#: model:ir.ui.menu,name:belajar_odoo.bus_menu
+msgid "Bus"
+msgstr "Bus"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_schedule_ids
+msgid "Bus Schedule"
+msgstr "Bus Schedule"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_state
+msgid "Bus Status"
+msgstr "Bus Status"
+
+#. module: belajar_odoo
+#: model:ir.actions.act_window,name:belajar_odoo.bus_act_view
+msgid "Bus Unit"
+msgstr "Bus Unit"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,help:belajar_odoo.field_transportasi_bus_code
+msgid "Bus' code"
+msgstr "Bus' code"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,help:belajar_odoo.field_transportasi_bus_name
+msgid "Bus' name"
+msgstr "Bus' name"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.wizard_bus_maintain
+msgid "Bus(es)"
+msgstr "Bus(es)"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.schedule_bus_form
+#: model:ir.ui.view,arch_db:belajar_odoo.wizard_bus_maintain
+msgid "Cancel"
+msgstr "Batalkan"
+
+#. module: belajar_odoo
+#: selection:jadwal.bus,state:0
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_capacity
+msgid "Capacity"
+msgstr "Kapasitas"
+
+#. module: belajar_odoo
+#: code:addons/belajar_odoo/report/report_schedule_xls.py:44
+#, python-format
+msgid "Class' Score Report"
+msgstr "Class' Score Report"
+
+#. module: belajar_odoo
+#: model:ir.actions.act_window,help:belajar_odoo.penumpang_act_view
+msgid "Click to create a passenger."
+msgstr "Click to create a passenger."
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_code
+msgid "Code"
+msgstr "Code"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_bus_maintain_wizard_create_uid
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_create_uid
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_create_uid
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_bus_maintain_wizard_create_date
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_create_date
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_create_date
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: belajar_odoo
+#: selection:jadwal.bus,state:0
+msgid "Delay"
+msgstr "Telat"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_departure_time
+msgid "Departure Time"
+msgstr "Waktu Berangkat"
+
+#. module: belajar_odoo
+#: selection:transportasi.bus,state:0
+msgid "Deprecated"
+msgstr "Usang"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.bus_view_form
+msgid "Detail"
+msgstr "Rinci"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_bus_maintain_wizard_display_name
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_display_name
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_display_name
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_display_name
+msgid "Display Name"
+msgstr "Nama Tampilan"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.schedule_bus_form
+#: selection:jadwal.bus,state:0
+msgid "Done"
+msgstr "Selesai"
+
+#. module: belajar_odoo
+#: selection:jadwal.bus,state:0
+msgid "Draft"
+msgstr "Rencana"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_driver_id
+#: model:ir.model.fields,field_description:belajar_odoo.field_res_partner_driver
+msgid "Driver"
+msgstr "Driver"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,help:belajar_odoo.field_jadwal_bus_driver_id
+msgid "Driver of the bus"
+msgstr "Driver of the bus"
+
+#. module: belajar_odoo
+#: model:ir.ui.menu,name:belajar_odoo.driver_menu
+msgid "Drivers"
+msgstr "Drivers"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_expense
+msgid "Expense"
+msgstr "Expense"
+
+#. module: belajar_odoo
+#: selection:penumpang.transportasi,state:0
+msgid "General"
+msgstr "General"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.bus_view_form
+msgid "General Information"
+msgstr "Informasi Umum"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_height
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "Height"
+msgstr "Height"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_bus_maintain_wizard_id
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_id
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_id
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_id
+msgid "ID"
+msgstr "ID"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_id_number
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "ID Number"
+msgstr "ID Number"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_image
+msgid "Image"
+msgstr "Gambar"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_income
+msgid "Income"
+msgstr "Income"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_bus_maintain_wizard___last_update
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus___last_update
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi___last_update
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus___last_update
+msgid "Last Modified on"
+msgstr "Terakhir diubah pada"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_bus_maintain_wizard_write_uid
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_write_uid
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_write_uid
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_write_uid
+msgid "Last Updated by"
+msgstr "Terakhir diperbarui oleh"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_bus_maintain_wizard_write_date
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_write_date
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_write_date
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_write_date
+msgid "Last Updated on"
+msgstr "Terakhir Diperbaharui pada"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.wizard_bus_maintain
+msgid "Maintain"
+msgstr "Maintain"
+
+#. module: belajar_odoo
+#: model:ir.ui.menu,name:belajar_odoo.maintain_wizard
+msgid "Maintain Adjustment"
+msgstr "Maintain Adjustment"
+
+#. module: belajar_odoo
+#: model:ir.actions.act_window,name:belajar_odoo.maintain_act_wizard
+msgid "Maintain Bus"
+msgstr "Maintain Bus"
+
+#. module: belajar_odoo
+#: selection:transportasi.bus,state:0
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#. module: belajar_odoo
+#: selection:penumpang.transportasi,state:0
+msgid "Member"
+msgstr "Member"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_name
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_name
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_name
+#: model:ir.ui.view,arch_db:belajar_odoo.bus_view_form
+#: model:ir.ui.view,arch_db:belajar_odoo.penumpang_view_form
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "Name"
+msgstr "Nama"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_note
+msgid "Note"
+msgstr "Note"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.schedule_bus_form
+msgid "Note for travel experience, moment, or incidents..."
+msgstr "Note for travel experience, moment, or incidents..."
+
+#. module: belajar_odoo
+#: selection:jadwal.bus,state:0
+#: selection:transportasi.bus,state:0
+msgid "OK"
+msgstr "OK"
+
+#. module: belajar_odoo
+#: model:ir.actions.act_window,name:belajar_odoo.action_schedule_bus
+#: model:ir.ui.menu,name:belajar_odoo.bus_schedule
+msgid "Operations"
+msgstr "Operations"
+
+#. module: belajar_odoo
+#: model:ir.model,name:belajar_odoo.model_res_partner
+msgid "Partner"
+msgstr "Rekanan"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,help:belajar_odoo.field_penumpang_transportasi_name
+msgid "Passenger's name"
+msgstr "Passenger's name"
+
+#. module: belajar_odoo
+#: model:ir.actions.act_window,name:belajar_odoo.penumpang_act_view
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_passenger_count
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_passenger_line
+#: model:ir.ui.menu,name:belajar_odoo.penumpang_menu
+#: model:ir.ui.menu,name:belajar_odoo.penumpang_sub_menu
+#: model:ir.ui.view,arch_db:belajar_odoo.schedule_bus_form
+msgid "Passengers"
+msgstr "Passengers"
+
+#. module: belajar_odoo
+#: model:ir.actions.act_window,help:belajar_odoo.penumpang_act_view
+msgid "Passengers are easily managed."
+msgstr "Passengers are easily managed."
+
+#. module: belajar_odoo
+#: model:ir.actions.act_window,name:belajar_odoo.action_schedule_bus_draft
+#: model:ir.ui.menu,name:belajar_odoo.bus_schedule_draft
+msgid "Plans"
+msgstr "Plans"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_price
+#: model:ir.model.fields,field_description:belajar_odoo.field_transportasi_bus_price
+msgid "Price"
+msgstr "Price"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.schedule_bus_form
+msgid "Run"
+msgstr "Run"
+
+#. module: belajar_odoo
+#: model:ir.ui.menu,name:belajar_odoo.schedule_parent
+#: model:ir.ui.view,arch_db:belajar_odoo.bus_view_form
+msgid "Schedule"
+msgstr "Schedule"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,help:belajar_odoo.field_jadwal_bus_name
+msgid "Schedule Name"
+msgstr "Schedule Name"
+
+#. module: belajar_odoo
+#: model:ir.actions.report.xml,name:belajar_odoo.report_schedule
+msgid "Schedule Plan / Operation"
+msgstr "Schedule Plan / Operation"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_schedule_time
+msgid "Schedule Time"
+msgstr "Schedule Time"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,help:belajar_odoo.field_transportasi_bus_capacity
+msgid "Seat or accomodation capability"
+msgstr "Seat or accomodation capability"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_state
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_state
+msgid "State"
+msgstr "Pernyataan"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_jadwal_bus_sub_total
+msgid "Sub Total"
+msgstr "Sub Total"
+
+#. module: belajar_odoo
+#: model:res.groups,name:belajar_odoo.group_transport_manager
+msgid "Transport Manager"
+msgstr "Transport Manager"
+
+#. module: belajar_odoo
+#: model:res.groups,name:belajar_odoo.group_transport_user
+msgid "Transport User"
+msgstr "Transport User"
+
+#. module: belajar_odoo
+#: model:ir.ui.menu,name:belajar_odoo.transportasi_menu
+msgid "Transportations"
+msgstr "Transportations"
+
+#. module: belajar_odoo
+#: model:ir.ui.menu,name:belajar_odoo.bus_unit
+msgid "Units"
+msgstr "Units"
+
+#. module: belajar_odoo
+#: model:ir.model.fields,field_description:belajar_odoo.field_penumpang_transportasi_weight
+#: model:ir.ui.view,arch_db:belajar_odoo.report_schedule_document
+msgid "Weight"
+msgstr "Weight"
+
+#. module: belajar_odoo
+#: model:ir.model,name:belajar_odoo.model_belajar_belajar
+msgid "belajar.belajar"
+msgstr "belajar.belajar"
+
+#. module: belajar_odoo
+#: model:ir.model,name:belajar_odoo.model_bus_maintain_wizard
+msgid "bus.maintain.wizard"
+msgstr "bus.maintain.wizard"
+
+#. module: belajar_odoo
+#: model:ir.model,name:belajar_odoo.model_bus_maintain
+msgid "bus_maintain"
+msgstr "bus_maintain"
+
+#. module: belajar_odoo
+#: model:ir.model,name:belajar_odoo.model_jadwal_bus
+msgid "jadwal.bus"
+msgstr "jadwal.bus"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.wizard_bus_maintain
+msgid "or"
+msgstr "or"
+
+#. module: belajar_odoo
+#: model:ir.model,name:belajar_odoo.model_penumpang_transportasi
+msgid "penumpang.transportasi"
+msgstr "penumpang.transportasi"
+
+#. module: belajar_odoo
+#: model:ir.model,name:belajar_odoo.model_transportasi_bus
+msgid "transportasi.bus"
+msgstr "transportasi.bus"
+
+#. module: belajar_odoo
+#: model:ir.ui.view,arch_db:belajar_odoo.view_partner_driver_kanban
+msgid "years"
+msgstr "years"
+

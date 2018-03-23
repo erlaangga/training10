@@ -1,0 +1,56 @@
+<odoo>
+	<data>
+		
+		<record model="ir.ui.view" id="view_partner_form_inherit">
+			<field name="name">Partner Form Driver Inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+				<field name="function" position="after">
+					<field name="employee" invisible="1" />
+					<field name="driver" attrs="{'invisible':[('employee','=',0)]}" />
+				</field>
+				<field name="function" position="before">
+					<field name="born_date" />
+				</field> 
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="view_partner_driver_kanban">
+			<field name="name">Partner Driver</field>
+			<field name="model">res.partner</field>
+			<field name="arch" type="xml">
+				<kanban>
+					<field name="image_small" />
+					<field name="age" />
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click o_res_partner_kanban">
+								<div class="o_kanban_image">
+                                    <t t-if="record.image_small.raw_value">
+                                        <img t-att-src="kanban_image('res.partner', 'image_small', record.id.value)"/>
+                                    </t>
+	                            </div>
+								<div class="oe_kanban_details">
+									<strong class="oe_partner_heading"><field name="display_name"/></strong>
+									<div t-if="record.function.raw_value"><field name="function"/></div>
+									<div t-if="record.born_date.raw_value"><field name="born_date"/></div>
+									<div t-if="record.age.raw_value"><span><field name="age"/> years</span></div>
+								</div>
+							</div>
+						</t>
+					</templates>			
+				</kanban>
+			</field>
+		</record>
+		
+		
+		<record id="action_partner_driver" model="ir.actions.act_window.view">
+			<field name="sequence" eval="1" />
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="view_partner_driver_kanban" />
+            <field name="act_window_id" ref="base.action_partner_employee_form"/>
+        </record>
+			
+	</data>
+</odoo>
