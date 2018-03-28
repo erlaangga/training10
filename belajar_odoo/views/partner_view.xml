@@ -35,7 +35,7 @@
 									<strong class="oe_partner_heading"><field name="display_name"/></strong>
 									<div t-if="record.function.raw_value"><field name="function"/></div>
 									<div t-if="record.born_date.raw_value"><field name="born_date"/></div>
-									<div t-if="record.age.raw_value"><span><field name="age"/> years</span></div>
+									<div t-if="record.born_date.raw_value"><span><field name="age"/> years</span></div>
 								</div>
 							</div>
 						</t>

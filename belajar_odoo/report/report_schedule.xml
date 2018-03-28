@@ -27,7 +27,7 @@
 				                </div>
 				                <div class="col-xs-2" t-if="doc.driver_id.name">
 				                    <strong>Driver:</strong>
-				                    <p t-field="doc.driver_id.email"/>
+				                    <p t-field="doc.driver_id.name"/>
 				                </div>
 				                <div class="col-xs-2" >
 				                    <strong>Departure Time:</strong>
@@ -40,6 +40,10 @@
 				                <div class="col-xs-2" t-if="doc.price">
 				                    <strong>Price:</strong>
 				                    <p t-field="doc.price"/>
+				                </div>
+				                <div class="col-xs-2" t-if="doc.state" >
+				                    <strong>State:</strong>
+				                    <p t-field="doc.state" />
 				                </div>
 				            </div>
 				            

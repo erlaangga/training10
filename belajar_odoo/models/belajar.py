@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*
 from odoo import models, fields, api
 import datetime
-from openid import store
+from odoo.exceptions import ValidationError
 
 class Penumpang(models.Model):
     _name = "penumpang.transportasi"
@@ -107,4 +107,12 @@ class Jadwal(models.Model):
     @api.multi
     def print_pdf(self):
         return self.env['report'].get_action(self, "belajar_odoo.report_schedule_document")
-        
+    
+    @api.constrains("driver_id")
+    def _age_constraint(self):
+        driver_id = self.driver_id
+        if driver_id.born_date:
+            if (datetime.datetime.strptime(driver_id.born_date,"%Y-%m-%d").year - datetime.datetime.now().year) <= 52:
+                raise ValidationError("Driver's age should be under 52")
+            
+            

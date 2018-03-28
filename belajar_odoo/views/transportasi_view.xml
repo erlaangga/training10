@@ -144,8 +144,7 @@
 			<field name="arch" type="xml">
 				<form>
 					<header>
-						<button name="%(remove_passenger_act_wizard)d" type="action" string="Remove Passenger" attrs="{'invisible':[('state','!=','draft')]}" />
-						<button name="print_excel" type="object" string="Print Excel" class="oe_highlight" />
+						
 						<button name="act_run" type="object" string="Run" class="oe_highlight" attrs="{'invisible':[('state','!=','draft')]}" />
 						<button name="act_done" type="object" string="Done" class="oe_highlight" states="ok,delay" />
 						<button name="act_cancel" type="object" string="Cancel" attrs="{'invisible':[('state','=','done')]}" />

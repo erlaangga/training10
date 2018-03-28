@@ -18,5 +18,15 @@
 		    file="res.partner.xlsx"
 		    attachment_use="False"
 		/>
+		
+		<report
+		    id="report_schedule_xlsx"
+		    model="jadwal.bus"
+		    string="Schedule XLSX"
+		    report_type="xlsx"
+		    name="bus.schedule.xlsx"
+		    file="Schedule.xlsx"
+		    attachment_use="False"
+		/>
 	</data>
 </odoo>
